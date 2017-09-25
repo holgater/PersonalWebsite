@@ -1,0 +1,38 @@
+body {
+	background-color: White;
+}
+
+aside {
+	/*float: left;
+	width: 25%;*/
+	border-right: solid black;
+	background-color: LightSteelBlue;
+}
+
+aside img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2em;
+	border: solid black;
+}
+
+aside h1 {
+	text-align: center;
+}
+
+aside ul {
+	padding-left: 0;
+	text-align: center;
+	list-style: none;
+}
+
+section {
+	/*float: right;
+	width: 74%;*/
+}
+
+footer {
+	clear: both;
+	border-top: solid black;
+	background-color: LightSteelBlue;
+}
