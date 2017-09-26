@@ -3,8 +3,7 @@ body {
 }
 
 aside {
-	/*float: left;
-	width: 25%;*/
+	height: 100%;
 	border-right: solid black;
 	background-color: LightSteelBlue;
 }
@@ -27,12 +26,12 @@ aside ul {
 }
 
 section {
-	/*float: right;
-	width: 74%;*/
+	height: 100%;
 }
 
 footer {
 	clear: both;
+	height: 20%;
 	border-top: solid black;
 	background-color: LightSteelBlue;
 }
