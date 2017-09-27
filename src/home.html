@@ -1,1 +1,35 @@
-<p>home</p>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!--bootstrap-->
+	<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+<div class="displayAreaContent">
+	<h1 id="greetingTitle"></h1>
+
+	<p>My name is Richard Holgate, and this is my person website. I recently 
+	graduated with a degree in Computer Science from Portland State University.
+	 I am currently looking for a software engineering job - I have a love for
+	 Web Development and Object Oriented Programming in Java and C++. In my 
+	free time I like to tinker with Arduinos and Raspberry Pis, develop 
+	programming projects, practice my drawing, and play video games.</p>
+
+	<p>I'm glad to have you visiting. I suggest checking out my coding projects
+	 and other projects pages, or if you want to see some fun, check out my 
+	testing area. Feel free to visit the About page for contact information, and
+	my LinkedIn and GitHub profiles.</p>
+</div>
+</body>
+
+<script>
+$(document).ready(function() {
+	let randomTitle = "Welcome!";
+	let titleArray = ["Welcome!", "Howdy!", "Hey there!", "Come on in!", "How's it going?"];
+	let randomTitleIndex = Math.floor(Math.random()*5);	
+
+	randomTitle = titleArray[randomTitleIndex];
+
+	$("#greetingTitle").html(randomTitle);
+});
+</script>
+</html>

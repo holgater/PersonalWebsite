@@ -29,6 +29,10 @@ section {
 	height: 100%;
 }
 
+.displayAreaContent {
+	margin-top: 15em;
+}
+
 footer {
 	clear: both;
 	height: 20%;
