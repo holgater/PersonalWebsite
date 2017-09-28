@@ -3,7 +3,10 @@ body {
 }
 
 aside {
-	height: 100%;
+	top: 0;
+	bottom: 0;
+	min-height: 100%;
+	height: auto;
 	border-right: solid black;
 	background-color: LightSteelBlue;
 }
@@ -26,7 +29,8 @@ aside ul {
 }
 
 section {
-	height: 100%;
+	display: block;
+	overflow: auto;
 }
 
 .displayAreaContent {
