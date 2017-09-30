@@ -3,10 +3,7 @@ body {
 }
 
 aside {
-	top: 0;
-	bottom: 0;
-	min-height: 100%;
-	height: auto;
+	min-height: 100%;	
 	border-right: solid black;
 	background-color: LightSteelBlue;
 }
@@ -33,8 +30,12 @@ section {
 	overflow: auto;
 }
 
-.displayAreaContent {
-	margin-top: 15em;
+#mainArea {
+	display: flex; /* children are equal height */
+}
+
+td {
+	border: 3px solid lightgrey;
 }
 
 footer {
