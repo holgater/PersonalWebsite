@@ -26,6 +26,7 @@ aside ul {
 }
 
 section {
+	min-height: 100%;
 	display: block;
 	overflow: auto;
 }

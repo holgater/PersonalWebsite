@@ -5,82 +5,49 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!--bootstrap-->
 	<link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
+
 <body>
-	<table style="width:100%">
-		<script language="javascript" type="text/javascript">
+	<table style="width:100%" id="projectsTable">
+		<!-- Create table cell for each project with javascript -->
+		<script>
 		let numberOfProjects = 9;
 		let numberOfRows = 3;
 		let numberOfColumns = numberOfProjects / numberOfRows;
-		for (let tableRow = 0; tableRow < numberOfProjects / numberOfRows; ++tableRow) {
-			document.write("<tr>");
-			for (let tableColumn = 0; tableColumn < numberOfProjects / numberOfColumns; ++tableColumn) {
-				let tableIndex =  ((tableRow*numberOfRows) + tableColumn + 1);
-				document.write("<td>" +
-						"<img width='50px' height='50px' src='https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg' />" +
-						"<h2>Other Project " + tableIndex + "</h2>" + 
-						"<p>A short description of project " + tableIndex + ". A partial description from an overall one that can be expanded...</p>" + 
-						"</td>");
+		let table = document.getElementById("projectsTable");
+		for (let tableRowNum = 0; tableRowNum < numberOfProjects / numberOfRows; ++tableRowNum) {
+
+			let tableRow = document.createElement("tr");
+			for (let tableColumnNum = 0; tableColumnNum < numberOfProjects / numberOfColumns; ++tableColumnNum) {
+
+				let tableIndex =  ((tableRowNum*numberOfRows) + tableColumnNum + 1);
+				let tableCell = document.createElement("td");
+
+				// Create project image within cell
+				let projectImage = document.createElement("img");
+				projectImage.width = "50";
+				projectImage.height = "50";
+				projectImage.src = "https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg";
+				tableCell.appendChild(projectImage);
+
+				// Create heading within cell
+				let projectTitle = document.createElement("h2");
+				projectTitle.innerHTML = "Other Project " + tableIndex;
+				tableCell.appendChild(projectTitle);
+
+				// Create description within cell
+				let projectDescription = document.createElement("p");
+				projectDescription.innerHTML = "A short description of project " + tableIndex + ". A partial description from an overall one that can be expanded...</p>";
+				tableCell.appendChild(projectDescription);
+
+				tableRow.appendChild(tableCell);
 			}
-			document.write("</tr>");
+			table.appendChild(tableRow);
 		}
 		</script>
-		<!--
-		<tr>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-			<td>
-				<img width="50px" height="50px" src="https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg" />
-				<h2>Coding project 1</h2>
-				<p>A short description of project 1. A partial description from an overall one that can be expanded...</p>
-			</td>
-		</tr>
-		-->
 	</table>	
 </body>
-<style>
 
+<style>
 table {
 	border-collapse: collapse;
 	border-style: hidden;
