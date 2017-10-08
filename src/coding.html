@@ -1,51 +1,45 @@
-<html>
-<head>
-	<script src="../js/bootstrap.min.js"></script> <!--bootstrap library-->
+<script src="../js/bootstrap.min.js"></script> <!--bootstrap library-->
 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!--bootstrap-->
-	<link rel="stylesheet" type="text/css" href="../css/main.css" />
-</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!--bootstrap-->
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<table style="width:100%" id="projectsTable">
+	<!-- Create table cell for each project with javascript -->
+	<script>
+	numberOfProjects = 9;
+	numberOfRows = 3;
+	numberOfColumns = numberOfProjects / numberOfRows;
+	table = document.getElementById("projectsTable");
+	for (let tableRowNum = 0; tableRowNum < numberOfProjects / numberOfRows; ++tableRowNum) {
 
-<body>
-	<table style="width:100%" id="projectsTable">
-		<!-- Create table cell for each project with javascript -->
-		<script>
-		let numberOfProjects = 9;
-		let numberOfRows = 3;
-		let numberOfColumns = numberOfProjects / numberOfRows;
-		let table = document.getElementById("projectsTable");
-		for (let tableRowNum = 0; tableRowNum < numberOfProjects / numberOfRows; ++tableRowNum) {
+		let tableRow = document.createElement("tr");
+		for (let tableColumnNum = 0; tableColumnNum < numberOfProjects / numberOfColumns; ++tableColumnNum) {
 
-			let tableRow = document.createElement("tr");
-			for (let tableColumnNum = 0; tableColumnNum < numberOfProjects / numberOfColumns; ++tableColumnNum) {
+			let tableIndex =  ((tableRowNum*numberOfRows) + tableColumnNum + 1);
+			let tableCell = document.createElement("td");
 
-				let tableIndex =  ((tableRowNum*numberOfRows) + tableColumnNum + 1);
-				let tableCell = document.createElement("td");
+			// Create project image within cell
+			let projectImage = document.createElement("img");
+			projectImage.width = "50";
+			projectImage.height = "50";
+			projectImage.src = "https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg";
+			tableCell.appendChild(projectImage);
 
-				// Create project image within cell
-				let projectImage = document.createElement("img");
-				projectImage.width = "50";
-				projectImage.height = "50";
-				projectImage.src = "https://pbs.twimg.com/profile_images/880868940473262081/aDbZcGA_.jpg";
-				tableCell.appendChild(projectImage);
+			// Create heading within cell
+			let projectTitle = document.createElement("h2");
+			projectTitle.innerHTML = "Coding Project " + tableIndex;
+			tableCell.appendChild(projectTitle);
 
-				// Create heading within cell
-				let projectTitle = document.createElement("h2");
-				projectTitle.innerHTML = "Coding Project " + tableIndex;
-				tableCell.appendChild(projectTitle);
+			// Create description within cell
+			let projectDescription = document.createElement("p");
+			projectDescription.innerHTML = "A short description of project " + tableIndex + ". A partial description from an overall one that can be expanded...</p>";
+			tableCell.appendChild(projectDescription);
 
-				// Create description within cell
-				let projectDescription = document.createElement("p");
-				projectDescription.innerHTML = "A short description of project " + tableIndex + ". A partial description from an overall one that can be expanded...</p>";
-				tableCell.appendChild(projectDescription);
-
-				tableRow.appendChild(tableCell);
-			}
-			table.appendChild(tableRow);
+			tableRow.appendChild(tableCell);
 		}
-		</script>
-	</table>	
-</body>
+		table.appendChild(tableRow);
+	}
+	</script>
+</table>	
 
 <style>
 table {
@@ -71,4 +65,3 @@ td p {
 }
 
 </style>
-</html>

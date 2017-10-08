@@ -25,6 +25,10 @@ aside ul {
 	list-style: none;
 }
 
+aside h3 {
+	margin-left: 15%;
+}
+
 section {
 	min-height: 100%;
 	display: block;

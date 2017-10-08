@@ -1,14 +1,8 @@
 $(document).ready(function() {
-	alert("poo");
+	navigate("home");
 });
 
 function navigate(location) {
-	/*$.ajax({
-		type: "GET",
-		url: "src/" + location + ".html",
-		success: function(result) {
-			$("#displayArea").appendChild(result);
-		}
-	});*/
+	/*$("#displayArea"). */
 	$("#displayArea").load("src/" + location + ".html");
 }
