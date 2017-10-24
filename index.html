@@ -14,37 +14,60 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <!--bootstrap-->
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
+
 <body>
 	<div id="mainArea">
 		<aside class="col-md-3">
 			<h1>Richard Holgate</h1>
 			<img id="profilePicture" src="images/profilePicture.png"/>
 			<nav>
-				<h3 onclick="navigate('home')">Home</h3>
-				<h3 onclick="navigate('coding')">Coding Projects</h3>
-				<h3 onclick="navigate('other')">Other Projects</h3>
-				<h3 onclick="navigate('blog')">Blog</h3>
-				<h3 onclick="navigate('testing')">Testing Area</h3>				
-				<h3 onclick="navigate('about')">About Me</h3>
+				<button class="button" onclick="navigate('home')">Home</button><br>
+				<button class="button" onclick="navigate('coding')">Coding Projects</button><br>
+				<button class="button" onclick="navigate('other')">Other Projects</button><br>
+				<button class="button" onclick="navigate('blog')">Blog</button><br>
+				<button class="button" onclick="navigate('testing')">Testing Area</button><br>
+				<button class="button" onclick="navigate('about')">About Me</button>
 			</nav>
 		</aside>
 		<section class="col-md-9" id="displayArea">
 		</section>
 	</div>
+	<!-- trying to get bootstrap working with flexbox
+	<div class="container">
+		<div class="d-flex flex-row">
+			<div class="col-md-3" style="background-color: red">
+			
+			<h1>Richard Holgate</h1>
+			<img id="profilePicture" src="images/profilePicture.png"/>
+			<nav>
+				<h3 onclick="navigate('home')">Home
+				<h3 onclick="navigate('coding')">Coding Projects
+				<h3 onclick="navigate('other')">Other Projects
+				<h3 onclick="navigate('blog')">Blog
+				<h3 onclick="navigate('testing')">Testing Area	
+				<h3 onclick="navigate('about')">About Me
+			</nav>
+			</div>
+			<div class="col-md-9" style="background-color: blue">
+			
+			</div>
+		</div>
+	</div>
+	-->
 	<footer>
-		<h1>This is a footer</h1>
+		<p>You can find the source code for this site can be found on github <a href="https://www.github.com/holgater/PersonalWebsite">here</a></p>
+		<i>Copywrite &copy; <script>document.write(new Date().getFullYear());</script> Richard Holgate </i>
 	</footer>
 </body>
+
 <style>
-#profilePicture {
-	width: 70%;
-	height: auto; /* keep picture in proportion */
-	display: block;
-	margin: 0 auto; /* this and display block keep picture centered */
-	margin-top: 2em;
-	margin-bottom: 2em;
-	border: solid silver;
-}	
 </style>
+
+<script>
+	$(document).ready(function() {
+		navigate('home');
+	});
+</script>
 </html>

@@ -1,0 +1,28 @@
+.displayAreaContent {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 10em;
+}
+
+table {
+	border-collapse: collapse;
+	border-style: hidden;
+}
+
+td {
+	padding: 2em;
+}
+
+td img {
+	display: block;
+	margin: 0 auto;
+}
+
+td h2 {
+	text-align: center;
+}
+
+td p {
+	text-align: center;
+}

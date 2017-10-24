@@ -2,25 +2,22 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /> <!--bootstrap-->
 	<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../css/home.css" />
 </head>
 <body>
 <div class="displayAreaContent">
 	<h1 id="greetingTitle"></h1>
 
-	<p>My name is Richard Holgate, and this is my person website. I recently 
-	graduated with a degree in Computer Science from Portland State University.
-	 I am currently looking for a software engineering job - I have a love for
-	 Web Development and Object Oriented Programming in Java and C++. In my 
-	free time I like to tinker with Arduinos and Raspberry Pis, develop 
-	programming projects, practice my drawing, and play video games.</p>
-
-	<p>I'm glad to have you visiting. I suggest checking out my coding projects
-	 and other projects pages, or if you want to see some fun, check out my 
-	testing area. Feel free to visit the About page for contact information, and
-	my LinkedIn and GitHub profiles.</p>
+	<p>My name is Richard, and this is my personal website. I am a recent graduate from PSU, and 
+		This site is somewhere for me to share what I know, and keep record of what I'm working on.
+		I suggest checking out my <a href="javascript:navigate('coding')">coding projects</a>, or my 
+		<a href="javascript:navigate('blog')">blog scroll</a>. If you want to see what else I'm up to, 
+		check out my <a href="javascript:navigate('other')">other projects</a> and my 
+		<a href="javascript:navigate('testing')">testing area</a>. To give you fair warning, this 
+		site is very new, and much of it is still under construction! Thanks for bearing with me, 
+		and welcome!</p>
 </div>
 </body>
-
 <script>
 $(document).ready(function() {
 	let randomTitle = "Welcome!";
@@ -32,11 +29,4 @@ $(document).ready(function() {
 	$("#greetingTitle").html(randomTitle);
 });
 </script>
-<style>
-
-.displayAreaContent {
-	margin-top: 10em;
-}
-
-</style>
 </html>

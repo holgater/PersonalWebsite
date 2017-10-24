@@ -1,0 +1,23 @@
+#profilePicture {
+	width: 70%;
+	height: auto; /* keep picture in proportion */
+	display: block;
+	margin: 0 auto; /* this and display block keep picture centered */
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border: solid silver;
+}	
+
+.button {
+	background-color: LightSteelBlue;
+	border: none;
+	text-align: center;
+	text-decoration;
+	display: inline-block;
+	font-size: 32px;
+	cursor: pointer;
+}
+
+nav {
+	padding-left: 15%;
+}

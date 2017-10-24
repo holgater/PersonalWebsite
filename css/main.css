@@ -37,6 +37,10 @@ section {
 
 #mainArea {
 	display: flex; /* children are equal height */
+	min-height:100%;
+	height: auto !important;
+	height: 100%;
+	margin 0 auto -100px;
 }
 
 td {
@@ -44,8 +48,8 @@ td {
 }
 
 footer {
-	clear: both;
-	height: 20%;
+	height: 100px;
+	padding: 2em 0em 2em 1em;
 	border-top: solid black;
 	background-color: LightSteelBlue;
 }
