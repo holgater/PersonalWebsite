@@ -1,1 +1,8 @@
 <p>testing</p>
+<script>
+	var socket = io();
+
+	socket.on('serverMsg',function(data){
+        	console.log(data.msg); 
+    	});
+</script>

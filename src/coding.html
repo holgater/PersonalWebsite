@@ -43,9 +43,7 @@ function generateTable(projectList) {
 			let currentProject = projectList[tableIndex];
 
 			let tableCell = document.createElement("td");
-			//tableCell.onclick = openProjectModal(currentProject);
-			tableCell.setAttribute("data-toggle", "modal");
-			tableCell.setAttribute("data-target", "#projectModal");
+			tableCell.onclick = openProjectModal.bind(currentProject);
 
 			// Create project image within cell
 			let projectImage = document.createElement("img");
@@ -69,18 +67,26 @@ function generateTable(projectList) {
 		table.appendChild(tableRow);
 	}
 }
-/*
+
 function openProjectModal(project) {
 	debugger;
 	$.get("src/projectModal.html", function(data) {
+		debugger;
 		let parent = $("#projectModalParent");
 		parent.empty();
 		parent.append(data);
 		
 		let container = $("#projectModal");
+		let title = $("#project-title");
+		title.innerHTML = project.title;
+		let picture = $("#project-picture");
+		picture.src = project.src;
+		let body = $("#project-body");
+		body.innerHMTL = project.description;
+		
 		container.modal();
 	});	
 }
-*/
+
 </script>
 </div>
